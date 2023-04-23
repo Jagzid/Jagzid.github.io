@@ -1,58 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Jumping Heart</title>
-    <style>
-      body {
-        background-color: #f7f7f7;
-      }
-
-      #heart {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 100px;
-        height: 90px;
-        transform: translate(-50%, -50%);
-        animation: jump 1s infinite;
-      }
-
-      #heart:before,
-      #heart:after {
-        content: "";
-        position: absolute;
-        background-color: red;
-        border-radius: 50px 50px 0 0;
-      }
-
-      #heart:before {
-        top: 0;
-        left: 50px;
-        width: 50px;
-        height: 50px;
-      }
-
-      #heart:after {
-        top: 0;
-        left: 0;
-        width: 50px;
-        height: 50px;
-      }
-
-      @keyframes jump {
-        0% {
-          transform: translate(-50%, -50%) scale(1);
-        }
-        50% {
-          transform: translate(-50%, -60%) scale(1.2);
-        }
-        100% {
-          transform: translate(-50%, -50%) scale(1);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="heart"></div>
-  </body>
-</html>
+<head>
+<meta charset="utf-8"/>
+<title>我喜欢你</title> 
+<link type="text/css" rel="stylesheet" href="css/theme.css">
+<script src="js/jquery-2.0.3.min.js"></script>
+</head>
+<body>
+<div id="div_container">
+ <!-- 最外层div，用于居中兼容PC和移动 -->
+ <div id="div_start_bg"></div>
+ <div id="div_onlyyou">
+  <!-- 用于设置背景 -->
+  <div id="div_oy_inner">
+   <!-- 用于存放content -->
+   <div class="div_oy_text">
+    <h1></h1>
+    <img class="img_oy_text" src="">
+    <p class="p_oy_text"></p>
+    <ul id="ul_oy_benefit">
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+     <li class="li_oy_benefit"></li>
+    </ul>
+   </div>
+   <ul id="ul_oy_btn">
+    <li onclick="oy_go_next()">Yes&nbsp;&nbsp;</li>
+    <li onclick="oy_show_benefit()">No&nbsp;&nbsp;✖</li>
+   </ul>
+   <div id="div_oy_note" onclick="oy_hide_note()">
+    <img src="images/emoji_kelian.jpg" alt=""><br>请告诉我Yes！
+    <div id="div_oy_note_close">✖</div>
+   </div>
+   <div id="div_oy_yes">
+    <img src="images/emoji_bixin.jpg" alt=""><br>太好了！哈哈~
+   </div>
+  </div>
+ </div>
+ <div class="div_pure_words">
+  <div class="div_pure_words_bg">
+   <div class="div_pure_words_height"></div>
+  </div>
+  <div class="div_pw_typed">
+   <span id="span_pw_typed"></span>
+  </div>
+ </div>
+ <div id="div_bt
